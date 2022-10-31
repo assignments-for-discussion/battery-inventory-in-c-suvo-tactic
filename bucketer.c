@@ -15,7 +15,7 @@ struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
   for(int i=0;i<nBatteries;++i)
   {
       if(cycles[i]<410)counts.lowCount+=1;  // checks the status of Battery if it is less than 410 then Low is printed
-      else if(cycles[i]>410 && cycles[i]<949)counts.mediumCount+=1;  // else if it is greater than 410  and less 949 than then Medium is printed
+      else if(cycles[i]>=410 && cycles[i]<=949)counts.mediumCount+=1;  // else if it is greater than 410  and less 949 than then Medium is printed
       else counts.highCount+=1; // else if it is greater than 950 than then High is printed
   }
   
